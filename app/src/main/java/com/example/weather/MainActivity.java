@@ -127,7 +127,7 @@ public class MainActivity extends AppCompatActivity {
     //City Selection Process i.e Function
 
     private void searchCityCode(String toString) {
-        String url = "https://dataservice.accuweather.com/locations/v1/cities/autocomplete?apikey=a34BCbkQ5rhXA34norAy39Q6cl44RR64&q=" + toString;
+        String url = "https://dataservice.accuweather.com/locations/v1/cities/autocomplete?apikey=e3Tan6Yhiv9NLZ4y8pmmOy7X23ihKTCa&q=" + toString;
         StringRequest request = new StringRequest(Request.Method.GET, url, new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
@@ -163,7 +163,7 @@ public class MainActivity extends AppCompatActivity {
 
     //Collecting Current City Weather Data using AccuWeather API through Volley
     private void getCurrentCond() {
-        String url = "https://dataservice.accuweather.com/currentconditions/v1/" + sharedPref.getString("CityKey", "206678") + "?apikey=a34BCbkQ5rhXA34norAy39Q6cl44RR64&details=true";
+        String url = "https://dataservice.accuweather.com/currentconditions/v1/" + sharedPref.getString("CityKey", "206678") + "?apikey=e3Tan6Yhiv9NLZ4y8pmmOy7X23ihKTCa&details=true";
         StringRequest request = new StringRequest(Request.Method.GET, url, new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
@@ -225,7 +225,7 @@ public class MainActivity extends AppCompatActivity {
     //Collecting 5 Day's Data using AccuWeather API through Volley
     private void fetchWeatherData() {
         modalList.clear();
-        String url = "https://dataservice.accuweather.com/forecasts/v1/daily/5day/" + sharedPref.getString("CityKey", "206678") + "?apikey=a34BCbkQ5rhXA34norAy39Q6cl44RR64&details=true&metric=true";
+        String url = "https://dataservice.accuweather.com/forecasts/v1/daily/5day/" + sharedPref.getString("CityKey", "206678") + "?apikey=e3Tan6Yhiv9NLZ4y8pmmOy7X23ihKTCa&details=true&metric=true";
         StringRequest request = new StringRequest(Request.Method.GET, url, new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
